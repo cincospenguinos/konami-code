@@ -1,4 +1,4 @@
-const Pattern = require('./pattern.js');
+import Pattern from './pattern.js';
 
 describe('Pattern', () => {
 	describe('#keyPressed', () => {
