@@ -7,6 +7,8 @@ class Pattern {
 	keyPressed(key) {
 		if (key === this.expectedKey) {
 			this.currentIndex += 1;
+		} else {
+			this.currentIndex = 0;
 		}
 	}
 
