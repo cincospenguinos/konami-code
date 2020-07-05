@@ -27,7 +27,7 @@ describe('Konami', () => {
 			expect(listener.mock.calls.length).toBe(0);
 		});
 
-		fit('uses the konami code by default', () => {
+		it('uses the konami code by default', () => {
 			const listener = jest.fn();
 			Konami.start(listener, keys);
 			Konami.KONAMI_CODE.forEach(key => emitKey(key));
