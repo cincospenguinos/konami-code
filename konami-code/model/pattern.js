@@ -5,7 +5,7 @@ class Pattern {
 	}
 
 	keyPressed(key) {
-		if (key === this.expectedKey) {
+		if (key === this._expectedKey) {
 			this.currentIndex += 1;
 		} else {
 			this.currentIndex = 0;
@@ -16,7 +16,7 @@ class Pattern {
 		return this.currentIndex >= this.pattern.length;
 	}
 
-	get expectedKey() {
+	get _expectedKey() {
 		return this.pattern[this.currentIndex];
 	}
 }
