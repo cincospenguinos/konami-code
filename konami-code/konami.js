@@ -4,10 +4,10 @@ class Konami {
 	static KONAMI_CODE = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 
 		'ArrowLeft', 'ArrowRight', 'b', 'a', 'Enter'];
 
-	static ListeningPattern = null;
+	static Listener = null;
 
 	static start(listener, keys = Konami.KONAMI_CODE) {
-		if (Konami.ListeningPattern === null) {
+		if (Konami.Listener === null) {
 			const pattern = new Pattern(keys);
 			document.addEventListener('keydown', (event) => {
 				pattern.keyPressed(event.key);
@@ -17,12 +17,15 @@ class Konami {
 				}
 			});
 
-			Konami.ListeningPattern = pattern;
+			Konami.Listener = listener;
 		}
 	}
 
 	static stop() {
-
+		if (Konami.Listener) {
+			document.removeEventListener('keydown', Konami.listener);
+			Konami.Listener = null;
+		}
 	}
 }
 

@@ -1,6 +1,6 @@
 {
   "name": "konami-code",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Small library to include the konami code",
   "main": "index.js",
   "scripts": {
