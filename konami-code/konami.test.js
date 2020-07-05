@@ -1,5 +1,8 @@
 import Konami from './konami.js';
 
+const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 
+		'ArrowLeft', 'ArrowRight', 'b', 'a', 'Enter'];
+
 describe('Konami', () => {
 	function emitKey(key) {
 		const event = new KeyboardEvent('keydown', { key });
@@ -30,7 +33,7 @@ describe('Konami', () => {
 		it('uses the konami code by default', () => {
 			const listener = jest.fn();
 			Konami.start(listener, keys);
-			Konami.KONAMI_CODE.forEach(key => emitKey(key));
+			konamiCode.forEach(key => emitKey(key));
 
 			expect(listener.mock.calls.length).toBe(1);
 		});

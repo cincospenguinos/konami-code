@@ -4,7 +4,8 @@
   "description": "Small library to include the konami code",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "lint": "npx eslint --color index.js konami-code"
   },
   "author": "Andre LaFleur",
   "license": "ISC",
@@ -12,6 +13,7 @@
     "@babel/core": "^7.10.4",
     "@babel/preset-env": "^7.10.4",
     "babel-jest": "^26.1.0",
+    "eslint": "^7.4.0",
     "jest": "^26.1.0"
   }
 }
