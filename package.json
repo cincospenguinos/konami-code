@@ -1,5 +1,5 @@
 {
-  "name": "konami-code",
+  "name": "konami-code-listener",
   "version": "1.0.0",
   "description": "Small library to include the konami code",
   "main": "index.js",
@@ -15,5 +15,18 @@
     "babel-jest": "^26.1.0",
     "eslint": "^7.4.0",
     "jest": "^26.1.0"
-  }
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cincospenguinos/konami-code.git"
+  },
+  "keywords": [
+    "konami-code",
+    "konami-listener"
+  ],
+  "bugs": {
+    "url": "https://github.com/cincospenguinos/konami-code/issues"
+  },
+  "homepage": "https://github.com/cincospenguinos/konami-code#readme"
 }
