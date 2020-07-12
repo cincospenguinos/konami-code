@@ -1,5 +1,5 @@
 {
-  "name": "@cincospenguinos/konami-code",
+  "name": "konami-code",
   "version": "1.0.0",
   "description": "Small library to include the konami code",
   "main": "index.js",
