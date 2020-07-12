@@ -5,18 +5,19 @@ const KONAMI_CODE = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft'
 let Listener = null;
 
 class Konami {
-	static start(listener, keys = KONAMI_CODE) {
+	static start(onCodeEntered, keys = KONAMI_CODE) {
 		if (Listener === null) {
 			const pattern = new Pattern(keys);
+
 			document.addEventListener('keydown', (event) => {
 				pattern.keyPressed(event.key);
 
 				if (pattern.isComplete) {
-					listener();
+					onCodeEntered();
 				}
 			});
 
-			Listener = listener;
+			Listener = onCodeEntered;
 		}
 	}
 
